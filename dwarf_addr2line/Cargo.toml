@@ -1,0 +1,19 @@
+[package]
+name = "dwarf_addr2line"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+name = "dwarf_addr2line"
+
+[dependencies]
+addr2line = "0.21"
+object = "0.32"
+gimli = "0.28"
+indexmap = "=2.6.0"  # Pin to avoid edition2024 requirement
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

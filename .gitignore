@@ -1,41 +1,43 @@
-# Prerequisites
-*.d
+# Build directories
+build/
+dwarf_addr2line/target/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# Compiled binaries
+sample
 *.exe
 *.out
 *.app
+*.elf
+*.bin
 
-# debug information files
-*.dwo
+# Rust
+dwarf_addr2line/Cargo.lock
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+
+# Object files
+*.o
+*.obj
+*.so
+*.so.*
+*.a
+*.lib
+*.dylib
+*.dll
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Cargo cache (if accidentally placed in project)
+.cargo/
